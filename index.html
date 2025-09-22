@@ -3,12 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <title>Guarda il mio video!</title>
+  <meta name="viewport" content="width=800, initial-scale=1">
+  <style>
+    body {
+      background: #141414;
+      color: #fff;
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    header {
+      width: 100%;
+      background: #141414;
+      display: flex;
+      align-items: center;
+      padding: 24px 0 16px 0;
+      justify-content: center;
+      box-shadow: 0 2px 20px 0 rgba(0,0,0,0.4);
+    }
+    .netflix-logo {
+      color: #e50914;
+      font-size: 2.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px #0008;
+      margin-right: 16px;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    h1 {
+      color: #fff;
+      font-size: 2rem;
+      margin: 16px 0 32px 0;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .video-container {
+      background: #181818;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px 0 #000a;
+      padding: 32px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 740px;
+      width: 100%;
+    }
+    video {
+      border-radius: 8px;
+      width: 100%;
+      max-width: 640px;
+      background: #000;
+      margin-bottom: 12px;
+      box-shadow: 0 4px 16px #000b;
+    }
+    @media (max-width: 700px) {
+      .video-container { padding: 12px 2vw; }
+      video { max-width: 98vw; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Guarda il mio video!</h1>
-  <video width="640" controls autoplay muted>
-    <source src="video.mp4" type="video/mp4">
-    Il tuo browser non supporta il tag video.
-  </video>
+  <header>
+    <div class="netflix-logo">NETFLIX</div>
+  </header>
+  <main>
+    <h1>Guarda il mio video!</h1>
+    <div class="video-container">
+      <video controls autoplay muted>
+        <source src="video.mp4" type="video/mp4">
+        Il tuo browser non supporta il tag video.
+      </video>
+    </div>
+  </main>
 </body>
 </html>
