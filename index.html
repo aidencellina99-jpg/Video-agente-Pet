@@ -2,38 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Carica e guarda un video</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    video {
-      margin-top: 20px;
-      max-width: 80%;
-      border: 2px solid #444;
-      border-radius: 10px;
-    }
-  </style>
+  <title>Guarda il mio video!</title>
 </head>
 <body>
-  <h1>Carica un video</h1>
-  <input type="file" id="videoInput" accept="video/*">
-  <br>
-  <video id="videoPlayer" controls></video>
-
-  <script>
-    const input = document.getElementById('videoInput');
-    const player = document.getElementById('videoPlayer');
-
-    input.addEventListener('change', function() {
-      const file = this.files[0];
-      if (file) {
-        const url = URL.createObjectURL(file);
-        player.src = url;
-      }
-    });
-  </script>
+  <h1>Guarda il mio video!</h1>
+  <video width="640" controls autoplay muted>
+    <source src="video.mp4" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
 </body>
 </html>
